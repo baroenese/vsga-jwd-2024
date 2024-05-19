@@ -3,3 +3,5 @@
 - Fidy Wartabone, A.Md.Kom Jwd 2024
 - Muhammad Febriansyah Mohi_VSGA-Manado 
 - Tri Putra Fauzan H. Radji
+- Baroen
+- Ato Mamonto

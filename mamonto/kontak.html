@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="modal" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Modal Heading</h4>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+
+          <!-- Modal body -->
+          <div class="modal-body">
+            <div class="container mt-3">
+              <h2>Stacked form</h2>
+              <form action="./Login.php" method="post">
+                <div class="mb-3 mt-3">
+                  <label for="email">Email:</label>
+                  <input type="email" class="form-control" id="email"
+                  placeholder="Masukan Email" name="email" required /">
+                </div>
+                <div class="mb-3">
+                  <label for="pwd">Password:</label>
+                  <input type="password" class="form-control" id="pwd"
+                  placeholder="Masukan password" name="pswd" required /">
+                </div>
+                <div class="form-check mb-3">
+                  <label class="form-check-label">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      name="remember"
+                    />
+                    Remember me
+                  </label>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+            </div>
+          </div>
+
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-danger"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <header
+        class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom"
+      >
+      <!-- awal judul -->
+    <div class="container-fluid mt-5">
+      <div class="row" style="background-color: rgb(100, 9, 186)">
+        <div class="col-sm-3">
+          <img src="data:image/jpeg;base64,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" />
+        </div>
+        <div class="col-sm-9">
+          <div class="container my-1">
+            <div class="p-5 text-center rounded-3" style="color: rgb(7, 7, 7);">
+              <h1 class="text-body-emphasis">PT.Motor Jaya</h1>
+              <p class="lead">Perusahaan Motor ternama di kota Gorontalo - berlokasi di SMK Negeri 1 Gorontalo</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- akhir judul -->
+        <a
+          href="/bot3.html"
+          class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
+        >
+          <svg class="bi me-2" width="40" height="32">
+            <use xlink:href="#bootstrap"></use>
+          </svg>
+          <span class="fs-4"></span>
+        </a>
+
+        <ul class="nav nav-pills">
+          <li class="nav-item">
+            <a href="./profil.html" class="nav-link " aria-current="page">Profil</a>
+          </li>
+          <li class="nav-item"><a href="./Faqs.html" class="nav-link"> Kontak kami</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Visi/Misi</a></li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Artikel</a>
+          </li>
+          <li class="nav-item">
+            <a
+              href="#"
+              class="nav-link"
+              data-bs-toggle="modal"
+              data-bs-target="#myModal"
+              >Login</a
+            >
+          </li>
+        </ul>
+      </header>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <!-- awalsidebar -->
+        <div class="col-sm-4">
+          <div
+            class="d-flex flex-column flex-shrink-0 p-3 bg-body-tertiary"
+            style="width: 280px"
+          >
+            <a
+              href="./bot3.html"
+              class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
+            >
+              <svg class="bi pe-none me-2" width="40" height="32">
+                <use xlink:href="#bootstrap"></use>
+              </svg>
+              <span class="fs-4">Pamungkas</span>
+            </a>
+            <hr />
+            <ul class="nav nav-pills flex-column mb-auto">
+              <li class="nav-item">
+                <a href="./bot3.html" class="nav-link active" aria-current="page">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    fill="currentColor"
+                    class="bi bi-house-check"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M7.293 1.5a1 1 0 0 1 1.414 0L11 3.793V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v3.293l2.354 2.353a.5.5 0 0 1-.708.708L8 2.207l-5 5V13.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 2 13.5V8.207l-.646.647a.5.5 0 1 1-.708-.708z"
+                    />
+                    <path
+                      d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m1.679-4.493-1.335 2.226a.75.75 0 0 1-1.174.144l-.774-.773a.5.5 0 0 1 .708-.707l.547.547 1.17-1.951a.5.5 0 1 1 .858.514"
+                    />
+                  </svg>
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="./daboard.html" class="nav-link link-body-emphasis">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    fill="currentColor"
+                    class="bi bi-alipay"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M2.541 0H13.5a2.55 2.55 0 0 1 2.54 2.563v8.297c-.006 0-.531-.046-2.978-.813-.412-.14-.916-.327-1.479-.536q-.456-.17-.957-.353a13 13 0 0 0 1.325-3.373H8.822V4.649h3.831v-.634h-3.83V2.121H7.26c-.274 0-.274.273-.274.273v1.621H3.11v.634h3.875v1.136h-3.2v.634H9.99c-.227.789-.532 1.53-.894 2.202-2.013-.67-4.161-1.212-5.51-.878-.864.214-1.42.597-1.746.998-1.499 1.84-.424 4.633 2.741 4.633 1.872 0 3.675-1.053 5.072-2.787 2.08 1.008 6.37 2.738 6.387 2.745v.105A2.55 2.55 0 0 1 13.5 16H2.541A2.55 2.55 0 0 1 0 13.437V2.563A2.55 2.55 0 0 1 2.541 0"
+                    />
+                    <path
+                      d="M2.309 9.27c-1.22 1.073-.49 3.034 1.978 3.034 1.434 0 2.868-.925 3.994-2.406-1.602-.789-2.959-1.353-4.425-1.207-.397.04-1.14.217-1.547.58Z"
+                    />
+                  </svg>
+                  Dashboard
+                </a>
+              </li>
+              <li>
+                <a href="./orther.html" class="nav-link link-body-emphasis">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    fill="currentColor"
+                    class="bi bi-badge-4k-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M3.577 8.9v.03h1.828V5.898h-.062a47 47 0 0 0-1.766 3.001z"
+                    />
+                    <path
+                      d="M2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zm2.372 3.715.435-.714h1.71v3.93h.733v.957h-.733V11H5.405V9.888H2.5v-.971c.574-1.077 1.225-2.142 1.872-3.202m7.73-.714h1.306l-2.14 2.584L13.5 11h-1.428l-1.679-2.624-.615.7V11H8.59V5.001h1.187v2.686h.057L12.102 5z"
+                    />
+                  </svg>
+                  Event
+                </a>
+              </li>
+              <li>
+                <a href="./Products.html" class="nav-link link-body-emphasis">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    fill="currentColor"
+                    class="bi bi-bug-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M4.978.855a.5.5 0 1 0-.956.29l.41 1.352A5 5 0 0 0 3 6h10a5 5 0 0 0-1.432-3.503l.41-1.352a.5.5 0 1 0-.956-.29l-.291.956A5 5 0 0 0 8 1a5 5 0 0 0-2.731.811l-.29-.956z"
+                    />
+                    <path
+                      d="M13 6v1H8.5v8.975A5 5 0 0 0 13 11h.5a.5.5 0 0 1 .5.5v.5a.5.5 0 1 0 1 0v-.5a1.5 1.5 0 0 0-1.5-1.5H13V9h1.5a.5.5 0 0 0 0-1H13V7h.5A1.5 1.5 0 0 0 15 5.5V5a.5.5 0 0 0-1 0v.5a.5.5 0 0 1-.5.5zm-5.5 9.975V7H3V6h-.5a.5.5 0 0 1-.5-.5V5a.5.5 0 0 0-1 0v.5A1.5 1.5 0 0 0 2.5 7H3v1H1.5a.5.5 0 0 0 0 1H3v1h-.5A1.5 1.5 0 0 0 1 11.5v.5a.5.5 0 1 0 1 0v-.5a.5.5 0 0 1 .5-.5H3a5 5 0 0 0 4.5 4.975"
+                    />
+                  </svg>
+                  Products
+                </a>
+              </li>
+              <li>
+                <a href="./Customer.html" class="nav-link link-body-emphasis">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    fill="currentColor"
+                    class="bi bi-people-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"
+                    />
+                  </svg>
+                  Galeri Foto
+                </a>
+              </li>
+              <li>
+                <a href="./barang.html" class="nav-link link-body-emphasis">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    fill="currentColor"
+                    class="bi bi-dropbox"
+                    viewBox="0 0 16 16" >
+                    <path
+                      d="M8.01 4.555 4.005 7.11 8.01 9.665 4.005 12.22 0 9.651l4.005-2.555L0 4.555 4.005 2zm-4.026 8.487 4.006-2.555 4.005 2.555-4.005 2.555zm4.026-3.39 4.005-2.556L8.01 4.555 11.995 2 16 4.555 11.995 7.11 16 9.665l-4.005 2.555z"
+                    />
+                  </svg>
+                  Klien kami
+                </a>
+              </li>
+            </ul>
+            <hr />
+            <div class="dropdown">
+              <a
+                href="#"
+                class="d-flex align-items-center link-body-emphasis text-decoration-none dropdown-toggle"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img
+                  src="https://github.com/mdo.png"
+                  alt=""
+                  width="32"
+                  height="32"
+                  class="rounded-circle me-2"
+                />
+                <strong>mdo</strong>
+              </a>
+              <ul class="dropdown-menu text-small shadow">
+                <li><a class="dropdown-item" href="#">New project...</a></li>
+                <li><a class="dropdown-item" href="#">Settings</a></li>
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">Sign out</a></li>
+                <img class="mySlides" src="img_snowtops.jpg" />
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- akhirsidebar -->
+        <div class="col-sm-8">
+          <!-- Carousel -->
+          <div id="demo" class="carousel slide" data-bs-ride="carousel">
+            <!-- Indicators/dots -->
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#demo"
+                data-bs-slide-to="0"
+                class="active"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#demo"
+                data-bs-slide-to="1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#demo"
+                data-bs-slide-to="2"
+              ></button>
+            </div>
+
+            <!-- The slideshow/carousel -->
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwjv1jGQSiY6EZQMCBwZCyG2S3Fh1IDqPMoA&s"
+                  alt="Los Angeles"
+                  class="d-block"
+                  style="width: 100%"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSH7Ie1d5rFdOLrUewmqBcAPCp1FGGW9bLK7g&s"
+                  alt="Chicago"
+                  class="d-block"
+                  style="width: 100%"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSuztF47zpERbKz5IiQt5e-vOLYj0fAAqDuw&s"
+                  alt="New York"
+                  class="d-block"
+                  style="width: 100%"
+                />
+              </div>
+            </div>
+
+            <!-- Left and right controls/icons -->
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#demo"
+              data-bs-slide="prev"
+            >
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#demo"
+              data-bs-slide="next"
+            >
+              <span class="carousel-control-next-icon"></span>
+            </button>
+          </div>
+
+          <div class="container-fluid mt-3">
+            <h3>Terima Kasih Sudah Mengakses</h3>
+            <p>
+              Web ini adalah platform travel terdepan se-Asia Tenggara, kami
+              menyediakan akses untuk kamu bisa menemukan dan membeli berbagai
+              jenis kebutuhan perjalanan, atraksi lokal, dan produk layanan
+              keuangan.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="container">
+            <footer
+              class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"
+            >
+              <div class="col-md-4 d-flex align-items-center">
+                <a
+                  href="/"
+                  class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1"
+                >
+                  <svg class="bi" width="30" height="24">
+                    <use xlink:href="#bootstrap"></use>
+                  </svg>
+                </a>
+                <span class="mb-3 mb-md-0 text-body-secondary"
+                  >© 2024 @aprianto</span
+                >
+              </div>
+
+              <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                <li class="ms-3">
+                  <a class="text-body-secondary" href="#">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      class="bi bi-twitter-x"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"
+                      />
+                    </svg>
+                  </a>
+                </li>
+                <li class="ms-3">
+                  <a class="text-body-secondary" href="#">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      class="bi bi-instagram"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"
+                      />
+                    </svg>
+                  </a>
+                </li>
+                <li class="ms-3">
+                  <a class="text-body-secondary" href="#">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      class="bi bi-facebook"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"
+                      />
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

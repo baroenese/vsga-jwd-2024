@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="modal" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Modal Heading</h4>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+
+          <!-- Modal body -->
+          <div class="modal-body">
+            <div class="container mt-3">
+              <h2>Stacked form</h2>
+              <form action="./Login.php" method="post">
+                <div class="mb-3 mt-3">
+                  <label for="email">Email:</label>
+                  <input type="email" class="form-control" id="email"
+                  placeholder="Masukan Email" name="email" required /">
+                </div>
+                <div class="mb-3">
+                  <label for="pwd">Password:</label>
+                  <input type="password" class="form-control" id="pwd"
+                  placeholder="Masukan password" name="pswd" required /">
+                </div>
+                <div class="form-check mb-3">
+                  <label class="form-check-label">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      name="remember"
+                    />
+                    Remember me
+                  </label>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+            </div>
+          </div>
+
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-danger"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <header
+        class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom"
+      >
+        <a
+          href="/"
+          class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
+        >
+          <svg class="bi me-2" width="40" height="32">
+            <use xlink:href="#bootstrap"></use>
+          </svg>
+          <span class="fs-4"></span>
+        </a>
+
+        <ul class="nav nav-pills">
+          <li class="nav-item">
+            <a href="./profil.html" class="nav-link" aria-current="page">Profil</a>
+          </li>
+          <li class="nav-item"><a href="#" class="nav-link">Kontak Kami</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Visi/Misi</a></li>
+          <li class="nav-item">
+            <a href="./Faqs.html" class="nav-link">Artikel</a>
+          </li>
+          <li class="nav-item">
+            <a
+              href="#"
+              class="nav-link"
+              data-bs-toggle="modal"
+              data-bs-target="#myModal"
+              >Login</a
+            >
+          </li>
+        </ul>
+      </header>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <!-- awalsidebar -->
+        <div class="col-sm-4">
+          <div
+            class="d-flex flex-column flex-shrink-0 p-3 bg-body-tertiary"
+            style="width: 280px"
+          >
+            <a
+              href="/"
+              class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
+            >
+              <svg class="bi pe-none me-2" width="40" height="32">
+                <use xlink:href="#bootstrap"></use>
+              </svg>
+              <span class="fs-4">Pamungkas</span>
+            </a>
+            <hr />
+            <ul class="nav nav-pills flex-column mb-auto">
+              <li class="nav-item">
+                <a href="./bot3.html" class="nav-link text-dark" aria-current="page">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    fill="currentColor"
+                    class="bi bi-house-check"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M7.293 1.5a1 1 0 0 1 1.414 0L11 3.793V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v3.293l2.354 2.353a.5.5 0 0 1-.708.708L8 2.207l-5 5V13.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 2 13.5V8.207l-.646.647a.5.5 0 1 1-.708-.708z"
+                    />
+                    <path
+                      d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m1.679-4.493-1.335 2.226a.75.75 0 0 1-1.174.144l-.774-.773a.5.5 0 0 1 .708-.707l.547.547 1.17-1.951a.5.5 0 1 1 .858.514"
+                    />
+                  </svg>
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="./daboard.html" class="nav-link link-body-emphasis">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    fill="currentColor"
+                    class="bi bi-alipay"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M2.541 0H13.5a2.55 2.55 0 0 1 2.54 2.563v8.297c-.006 0-.531-.046-2.978-.813-.412-.14-.916-.327-1.479-.536q-.456-.17-.957-.353a13 13 0 0 0 1.325-3.373H8.822V4.649h3.831v-.634h-3.83V2.121H7.26c-.274 0-.274.273-.274.273v1.621H3.11v.634h3.875v1.136h-3.2v.634H9.99c-.227.789-.532 1.53-.894 2.202-2.013-.67-4.161-1.212-5.51-.878-.864.214-1.42.597-1.746.998-1.499 1.84-.424 4.633 2.741 4.633 1.872 0 3.675-1.053 5.072-2.787 2.08 1.008 6.37 2.738 6.387 2.745v.105A2.55 2.55 0 0 1 13.5 16H2.541A2.55 2.55 0 0 1 0 13.437V2.563A2.55 2.55 0 0 1 2.541 0"
+                    />
+                    <path
+                      d="M2.309 9.27c-1.22 1.073-.49 3.034 1.978 3.034 1.434 0 2.868-.925 3.994-2.406-1.602-.789-2.959-1.353-4.425-1.207-.397.04-1.14.217-1.547.58Z"
+                    />
+                  </svg>
+                  Dashboard
+                </a>
+              </li>
+              <li>
+                <a href="./orther.html" class="nav-link link-body-emphasis">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    fill="currentColor"
+                    class="bi bi-badge-4k-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M3.577 8.9v.03h1.828V5.898h-.062a47 47 0 0 0-1.766 3.001z"
+                    />
+                    <path
+                      d="M2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zm2.372 3.715.435-.714h1.71v3.93h.733v.957h-.733V11H5.405V9.888H2.5v-.971c.574-1.077 1.225-2.142 1.872-3.202m7.73-.714h1.306l-2.14 2.584L13.5 11h-1.428l-1.679-2.624-.615.7V11H8.59V5.001h1.187v2.686h.057L12.102 5z"
+                    />
+                  </svg>
+                  Event
+                </a>
+              </li>
+              <li>
+                <a href="./Products.html" class="nav-link link-body-emphasis">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    fill="currentColor"
+                    class="bi bi-bug-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M4.978.855a.5.5 0 1 0-.956.29l.41 1.352A5 5 0 0 0 3 6h10a5 5 0 0 0-1.432-3.503l.41-1.352a.5.5 0 1 0-.956-.29l-.291.956A5 5 0 0 0 8 1a5 5 0 0 0-2.731.811l-.29-.956z"
+                    />
+                    <path
+                      d="M13 6v1H8.5v8.975A5 5 0 0 0 13 11h.5a.5.5 0 0 1 .5.5v.5a.5.5 0 1 0 1 0v-.5a1.5 1.5 0 0 0-1.5-1.5H13V9h1.5a.5.5 0 0 0 0-1H13V7h.5A1.5 1.5 0 0 0 15 5.5V5a.5.5 0 0 0-1 0v.5a.5.5 0 0 1-.5.5zm-5.5 9.975V7H3V6h-.5a.5.5 0 0 1-.5-.5V5a.5.5 0 0 0-1 0v.5A1.5 1.5 0 0 0 2.5 7H3v1H1.5a.5.5 0 0 0 0 1H3v1h-.5A1.5 1.5 0 0 0 1 11.5v.5a.5.5 0 1 0 1 0v-.5a.5.5 0 0 1 .5-.5H3a5 5 0 0 0 4.5 4.975"
+                    />
+                  </svg>
+                  Products
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link text-white active">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    fill="currentColor"
+                    class="bi bi-people-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"
+                    />
+                  </svg>
+                  Galeri Foto
+                </a>
+              </li>
+              <li>
+                <a href="./barang.html" class="nav-link link-body-emphasis">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    fill="currentColor"
+                    class="bi bi-dropbox"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M8.01 4.555 4.005 7.11 8.01 9.665 4.005 12.22 0 9.651l4.005-2.555L0 4.555 4.005 2zm-4.026 8.487 4.006-2.555 4.005 2.555-4.005 2.555zm4.026-3.39 4.005-2.556L8.01 4.555 11.995 2 16 4.555 11.995 7.11 16 9.665l-4.005 2.555z"
+                    />
+                  </svg>
+                  Klien Kami
+                </a>
+              </li>
+            </ul>
+            <hr />
+            <div class="dropdown">
+              <a
+                href="#"
+                class="d-flex align-items-center link-body-emphasis text-decoration-none dropdown-toggle"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img
+                  src="https://github.com/mdo.png"
+                  alt=""
+                  width="32"
+                  height="32"
+                  class="rounded-circle me-2"
+                />
+                <strong>mdo</strong>
+              </a>
+              <ul class="dropdown-menu text-small shadow">
+                <li><a class="dropdown-item" href="#">New project...</a></li>
+                <li><a class="dropdown-item" href="#">Settings</a></li>
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">Sign out</a></li>
+                <img class="mySlides" src="img_snowtops.jpg" />
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- akhirsidebar -->
+        <div class="col-sm-8">
+          <!-- Carousel -->
+         <!-- Carousel -->
+         <div id="demo" class="carousel slide" data-bs-ride="carousel">
+          <!-- Indicators/dots -->
+          <html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+<div class="w3-container w3-teal">
+  <h1>Deretan Modifikasi Motor Harley</h1>
+</div>
+
+<div class="w3-row-padding w3-margin-top">
+  <div class="w3-third">
+    <div class="w3-card">
+      <img src="data:image/jpeg;base64,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" style="width:100%">
+      <div class="w3-container">
+        <h5>5 Terre</h5>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-third">
+    <div class="w3-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrEWv0l_UF5VSUVXewNkdSpogKLGYbbrc2IV2hqj83UQ&s" style="width:100%">
+      <div class="w3-container">
+        <h5>Monterosso</h5>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-third">
+    <div class="w3-card">
+      <img src="https://imgx.gridoto.com/crop/0x0:0x0/700x465/photo/2020/06/08/1894323698.jpg" style="width:100%">
+      <div class="w3-container">
+        <h5>Aku Punya</h5>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="w3-row-padding w3-margin-top">
+  <div class="w3-third">
+    <div class="w3-card">
+      <img src="https://imgx.gridoto.com/crop/0x0:0x0/700x465/photo/2020/03/19/248776361.jpg" style="width:100%">
+      <div class="w3-container">
+        <h5>Marjon Punya</h5>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-third">
+    <div class="w3-card">
+      <img src="https://awsimages.detik.net.id/community/media/visual/2016/06/08/0742de85-5f98-40b8-868b-cfbbe7d1bb23_43.jpg?w=600&q=90" style="width:100%">
+      <div class="w3-container">
+        <h5>Oyis Punya</h5>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-third">
+    <div class="w3-card">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjKTWNMicDtvpd1ftMK7CeThZz97N1_ZQs5yPg3iq6mSEFYtjp0sylM_0xBDSlHzXLSCxYQwYRbgsmRD2qehxDzAH3ss6o0lOF1zznr5gYsZOLgYJydfeaHcjP8lOIdaxPQA5xgknCjFmNc/s1600/Modifikasi+Motor+Harley+Davidson+Softail+Fatboy+Lo+Terbaru+2014+(6).jpg" style="width:100%">
+      <div class="w3-container">
+        <h5>Tidak Di Jual</h5>
+      </div>
+    </div>
+  </div>
+</div>
+
+        </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="container">
+            <footer
+              class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"
+            >
+              <div class="col-md-4 d-flex align-items-center">
+                <a
+                  href="/"
+                  class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1"
+                >
+                  <svg class="bi" width="30" height="24">
+                    <use xlink:href="#bootstrap"></use>
+                  </svg>
+                </a>
+                <span class="mb-3 mb-md-0 text-body-secondary"
+                  >© 2024 @aprianto</span
+                >
+              </div>
+
+              <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                <li class="ms-3">
+                  <a class="text-body-secondary" href="#">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      class="bi bi-twitter-x"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"
+                      />
+                    </svg>
+                  </a>
+                </li>
+                <li class="ms-3">
+                  <a class="text-body-secondary" href="#">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      class="bi bi-instagram"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"
+                      />
+                    </svg>
+                  </a>
+                </li>
+                <li class="ms-3">
+                  <a class="text-body-secondary" href="#">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      class="bi bi-facebook"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"
+                      />
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
